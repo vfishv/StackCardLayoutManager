@@ -53,7 +53,7 @@ fun AppCompatActivity.getStringExtra(extra: String): ReadOnlyProperty<AppCompatA
             override fun getValue(
                     thisRef: AppCompatActivity,
                     property: KProperty<*>
-            ): String = thisRef.intent.getStringExtra(extra)
+            ): String = thisRef.intent.getStringExtra(extra)?:""
         }
 
 fun AppCompatActivity.getIntExtra(extra: String): ReadOnlyProperty<AppCompatActivity, Int> =
